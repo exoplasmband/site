@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EXOPLASM — Florida Nu Metal</title>
+<meta name="description" content="Exoplasm — five-piece nu metal band from Florida. Music, shows, and official merch.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0a09">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:title" content="EXOPLASM — Florida Nu Metal">
+<meta property="og:description" content="Five-piece nu metal band from Florida. Music, shows, and official merch.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://exoplasm.net/">
+<meta property="og:image" content="https://exoplasm.net/images/band-bw.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>*{margin:0;padding:0;box-sizing:border-box}</style>
+</head>
+<body>
+<style>
+  :root{
+    --void:#0b0a09;
+    --void2:#141210;
+    --bone:#e9e4d8;
+    --blood:#d21f1c;
+    --blood-dim:#7e1513;
+    --ice:#9fc9dd;
+    --concrete:#635e55;
+    --amber:#c99b52;
+    --display:Haettenschweiler,'Arial Narrow',Impact,'Franklin Gothic Medium',sans-serif;
+    --mono:Consolas,'Courier New',monospace;
+    --body:'Segoe UI',Arial,sans-serif;
+  }
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--void);
+    color:var(--bone);
+    font-family:var(--body);
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--blood);color:var(--bone)}
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+    padding:.65rem 1.25rem;
+    background:rgba(11,10,9,.92);
+    border-bottom:2px solid var(--blood);
+    backdrop-filter:blur(6px);
+  }
+  .nav-logo{display:flex;align-items:center;text-decoration:none}
+  .nav-logo img{height:20px;width:auto;display:block;transition:opacity .15s}
+  .nav-logo:hover img,.nav-logo:focus-visible img{opacity:.65}
+  .nav-links{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
+  .nav-links a{
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--bone);text-decoration:none;
+    padding:.2rem 0;border-bottom:2px solid transparent;
+  }
+  .nav-links a:hover,.nav-links a:focus-visible{color:var(--blood);border-bottom-color:var(--blood);outline:none}
+  .nav-links a.ig{color:var(--ice)}
+  .nav-links a.ig:hover{color:var(--blood)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;isolation:isolate}
+  .hero-img{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:50% 38%;
+    filter:contrast(1.05) brightness(.9);
+    z-index:-2;
+  }
+  .hero-grade{
+    position:absolute;inset:0;z-index:-1;
+    background:
+      radial-gradient(120% 90% at 50% 10%, transparent 40%, rgba(11,10,9,.55) 78%, var(--void) 100%),
+      linear-gradient(to top, var(--void) 4%, rgba(11,10,9,.72) 22%, transparent 55%),
+      linear-gradient(160deg, rgba(210,31,28,.28), transparent 45%, rgba(159,201,221,.10) 90%);
+  }
+  .hero-noise{
+    position:absolute;inset:0;z-index:-1;opacity:.5;mix-blend-mode:overlay;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  }
+  .hero-inner{width:100%;padding:0 1.25rem 2.2rem}
+  .hero-eyebrow{
+    font-family:var(--mono);font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ice);margin-bottom:.4rem;text-shadow:0 1px 8px rgba(0,0,0,.8);
+  }
+  .hero-eyebrow b{color:var(--blood);font-weight:normal}
+  .wordmark{margin:0 0 1.8rem}
+  .wordmark img{
+    width:min(100%, 880px);height:auto;display:block;
+    filter:drop-shadow(7px 7px 0 var(--blood)) drop-shadow(0 6px 34px rgba(0,0,0,.95));
+  }
+  .hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:.5rem}
+  .btn{
+    font-family:var(--display);font-size:1.25rem;letter-spacing:.08em;text-transform:uppercase;
+    padding:.55rem 1.5rem .45rem;text-decoration:none;display:inline-block;
+    transform:skewX(-6deg);
+    transition:background .15s,color .15s;
+  }
+  .btn b{display:inline-block;transform:skewX(6deg);font-weight:normal}
+  .btn-blood{background:var(--blood);color:var(--bone)}
+  .btn-blood:hover,.btn-blood:focus-visible{background:var(--bone);color:var(--void);outline:none}
+  .btn-ghost{border:2px solid var(--bone);color:var(--bone)}
+  .btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--blood);color:var(--blood);outline:none}
+
+  /* ---------- ticker ---------- */
+  .ticker{
+    overflow:hidden;white-space:nowrap;
+    background:var(--blood);color:var(--void);
+    border-top:2px solid var(--void);border-bottom:2px solid var(--void);
+    padding:.34rem 0;
+  }
+  .ticker-track{display:inline-block;animation:crawl 26s linear infinite}
+  .ticker span{
+    font-family:var(--display);font-size:1.05rem;letter-spacing:.14em;text-transform:uppercase;
+    padding:0 1.1rem;
+  }
+  @keyframes crawl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{animation:none}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- cheetah divider ---------- */
+  .cheetah{
+    height:16px;
+    background-color:var(--amber);
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='16'%3E%3Cg fill='%230b0a09'%3E%3Cellipse cx='8' cy='5' rx='4.5' ry='3.2'/%3E%3Cellipse cx='26' cy='11' rx='5' ry='3.4' transform='rotate(-14 26 11)'/%3E%3Cellipse cx='44' cy='4' rx='4' ry='2.8' transform='rotate(18 44 4)'/%3E%3Cellipse cx='61' cy='11' rx='4.6' ry='3.1' transform='rotate(-8 61 11)'/%3E%3Ccircle cx='16' cy='13' r='1.6'/%3E%3Ccircle cx='35' cy='2.5' r='1.5'/%3E%3Ccircle cx='53' cy='13.5' r='1.7'/%3E%3Ccircle cx='69' cy='3' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* ---------- sections ---------- */
+  .section{padding:4.5rem 1.25rem;max-width:1080px;margin:0 auto}
+  .sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:2.2rem;border-bottom:3px solid var(--blood);padding-bottom:.4rem}
+  .sec-head h2{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(2.6rem,7vw,4.5rem);line-height:.95;text-transform:uppercase;
+    letter-spacing:.02em;color:var(--bone);transform:scaleY(1.12);transform-origin:left bottom;
+    margin:0;
+  }
+  .sec-head .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--concrete)}
+  .section p.lead{max-width:62ch;color:var(--bone)}
+  .section p.mut{max-width:62ch;color:var(--concrete)}
+  a.inline{color:var(--ice);text-decoration:underline;text-underline-offset:3px}
+  a.inline:hover{color:var(--blood)}
+
+  /* music */
+  .embed-slot{
+    margin-top:1.8rem;border:2px dashed var(--concrete);
+    padding:2.6rem 1.5rem;text-align:center;background:var(--void2);
+  }
+  .embed-slot .big{
+    font-family:var(--display);font-size:clamp(1.8rem,4.5vw,2.8rem);
+    text-transform:uppercase;letter-spacing:.05em;color:var(--blood);
+    transform:scaleY(1.1);display:block;margin-bottom:.5rem;
+  }
+  .embed-slot .sub{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--concrete)}
+
+  /* shows */
+  .shows-empty{
+    margin-top:.5rem;background:var(--void2);border-left:6px solid var(--blood);
+    padding:1.8rem 1.6rem;
+  }
+  .shows-empty .big{
+    font-family:var(--display);font-size:clamp(2rem,5.5vw,3.4rem);line-height:.95;
+    text-transform:uppercase;color:var(--bone);transform:scaleY(1.1);transform-origin:left bottom;
+    display:block;margin-bottom:.6rem;
+  }
+  .shows-empty .sub{font-family:var(--mono);font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--concrete)}
+
+  /* merch */
+  .merch-grid{
+    display:grid;gap:1.1rem;
+    grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  }
+  .card{
+    background:var(--void2);border:1px solid #262320;
+    text-decoration:none;display:flex;flex-direction:column;
+    transition:transform .15s,border-color .15s;
+  }
+  .card:hover,.card:focus-visible{transform:translateY(-4px) rotate(-.5deg);border-color:var(--blood);outline:none}
+  .card img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-bottom:2px solid var(--blood)}
+  .card-body{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.7rem .8rem}
+  .card-name{
+    font-family:var(--display);font-size:1.15rem;letter-spacing:.05em;text-transform:uppercase;
+    color:var(--bone);line-height:1.05;
+  }
+  .card-price{
+    font-family:var(--mono);font-size:.8rem;color:var(--void);background:var(--bone);
+    padding:.15rem .45rem;white-space:nowrap;transform:rotate(2deg);
+  }
+  .card:hover .card-price{background:var(--blood);color:var(--bone)}
+  .merch-cta{margin-top:1.8rem;text-align:right}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+  @media (max-width:760px){.about-grid{grid-template-columns:1fr}}
+  .about-photo{position:relative}
+  .about-photo img{
+    width:100%;display:block;
+    filter:grayscale(.3) contrast(1.08);
+    border:1px solid #262320;
+    box-shadow:10px 10px 0 var(--blood-dim);
+  }
+  .about-photo .stamp{
+    position:absolute;top:-14px;right:-8px;
+    font-family:var(--mono);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;
+    background:var(--amber);color:var(--void);padding:.25rem .6rem;transform:rotate(3deg);
+  }
+
+  /* footer */
+  footer{border-top:2px solid var(--blood);background:var(--void2);padding:3.5rem 1.25rem 2rem}
+  .foot-inner{max-width:1080px;margin:0 auto}
+  .foot-big{
+    font-family:var(--display);font-weight:400;
+    font-size:clamp(2.8rem,9vw,6rem);line-height:.9;text-transform:uppercase;
+    color:var(--bone);transform:scaleY(1.15);transform-origin:left bottom;margin:0 0 1rem;
+  }
+  .foot-big span{color:var(--blood)}
+  .foot-links{display:flex;gap:1.6rem;flex-wrap:wrap;margin:1.6rem 0 2.5rem}
+  .foot-links a{
+    font-family:var(--mono);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--ice);text-decoration:none;border-bottom:1px solid var(--concrete);padding-bottom:.15rem;
+  }
+  .foot-links a:hover,.foot-links a:focus-visible{color:var(--blood);border-bottom-color:var(--blood);outline:none}
+  .foot-fine{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--concrete)}
+</style>
+
+<nav class="nav">
+  <a class="nav-logo" href="#top"><img src="images/logo-small.png" alt="Exoplasm — home"></a>
+  <div class="nav-links">
+    <a href="#music">Music</a>
+    <a href="#shows">Shows</a>
+    <a href="#merch">Merch</a>
+    <a href="#about">The Band</a>
+    <a class="ig" href="https://instagram.com/exoplasmfl" target="_blank" rel="noopener">@exoplasmfl</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img class="hero-img" src="images/band-bw.jpg" alt="Exoplasm — five-piece nu metal band standing against a wall">
+  <div class="hero-grade"></div>
+  <div class="hero-noise"></div>
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Florida <b>&#10007;</b> Five Piece <b>&#10007;</b> Nu Metal</p>
+    <h1 class="wordmark"><img src="images/logo.png" alt="Exoplasm"></h1>
+    <div class="hero-ctas">
+      <a class="btn btn-blood" href="https://1zfeyd-3r.myshopify.com/collections/all" target="_blank" rel="noopener"><b>Shop Merch</b></a>
+      <a class="btn btn-ghost" href="https://instagram.com/exoplasmfl" target="_blank" rel="noopener"><b>Follow the Noise</b></a>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="music">
+  <div class="sec-head"><h2>The Noise</h2><span class="tag">// audio</span></div>
+  <div class="embed-slot">
+    <span class="big">First tracks loading&hellip;</span>
+    <span class="sub">&#9654; Spotify / Bandcamp player drops in here &mdash; until then, catch live clips on <a class="inline" href="https://instagram.com/exoplasmfl" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</section>
+
+<div class="cheetah" aria-hidden="true"></div>
+
+<section class="section" id="shows">
+  <div class="sec-head"><h2>In the Pit</h2><span class="tag">// shows</span></div>
+  <div class="shows-empty">
+    <span class="big">Next dates announcing soon.</span>
+    <span class="sub">Follow <a class="inline" href="https://instagram.com/exoplasmfl" target="_blank" rel="noopener">@exoplasmfl</a> so you don't miss the pit.</span>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Want Nu Info?</span><span>&#9760;</span><span>Fresh Merch Below</span><span>&#9760;</span><span>Support the Scene</span><span>&#9760;</span><span>Want Nu Info?</span><span>&#9760;</span><span>Fresh Merch Below</span><span>&#9760;</span><span>Support the Scene</span><span>&#9760;</span>
+  </div>
+</div>
+
+<section class="section" id="merch">
+  <div class="sec-head"><h2>Merch</h2><span class="tag">// wear the noise</span></div>
+  <div class="merch-grid">
+    <a class="card" href="https://1zfeyd-3r.myshopify.com/products/outbreak-g5k-sm-3xl" target="_blank" rel="noopener">
+      <img src="images/outbreak.jpg" alt="Outbreak tee">
+      <div class="card-body"><span class="card-name">Outbreak Tee</span><span class="card-price">$25</span></div>
+    </a>
+    <a class="card" href="https://1zfeyd-3r.myshopify.com/products/b-town-fetus-1" target="_blank" rel="noopener">
+      <img src="images/fetus.jpg" alt="B-Town Fetus tee">
+      <div class="card-body"><span class="card-name">B-Town Fetus</span><span class="card-price">$20</span></div>
+    </a>
+    <a class="card" href="https://1zfeyd-3r.myshopify.com/products/exoplasm-logo-tee-gildan-front-only" target="_blank" rel="noopener">
+      <img src="images/logotee.jpg" alt="Exoplasm band logo tee">
+      <div class="card-body"><span class="card-name">Band Logo Tee</span><span class="card-price">$20</span></div>
+    </a>
+    <a class="card" href="https://1zfeyd-3r.myshopify.com/products/exoplasm-cheatah-logo-tee-gildan-front-only" target="_blank" rel="noopener">
+      <img src="images/cheetah.jpg" alt="Cheetah print logo tee">
+      <div class="card-body"><span class="card-name">Cheetah Print Logo</span><span class="card-price">$20</span></div>
+    </a>
+    <a class="card" href="https://1zfeyd-3r.myshopify.com/products/exoplasm-alien-hoodie-gildan-alien-back-print" target="_blank" rel="noopener">
+      <img src="images/hoodie.jpg" alt="Logo alien hoodie">
+      <div class="card-body"><span class="card-name">Alien Hoodie</span><span class="card-price">$50</span></div>
+    </a>
+    <a class="card" href="https://1zfeyd-3r.myshopify.com/products/exoplasm-logo-cuffed-beanie-embroidery" target="_blank" rel="noopener">
+      <img src="images/beanie.jpg" alt="Embroidered logo beanie">
+      <div class="card-body"><span class="card-name">Logo Beanie</span><span class="card-price">$25</span></div>
+    </a>
+  </div>
+  <div class="merch-cta">
+    <a class="btn btn-ghost" href="https://1zfeyd-3r.myshopify.com/collections/all" target="_blank" rel="noopener"><b>Full Store &rarr;</b></a>
+  </div>
+</section>
+
+<div class="cheetah" aria-hidden="true"></div>
+
+<section class="section" id="about">
+  <div class="sec-head"><h2>The Band</h2><span class="tag">// who</span></div>
+  <div class="about-grid">
+    <div class="about-photo">
+      <img src="images/band.jpg" alt="The five members of Exoplasm">
+      <span class="stamp">FL &#10007; nu metal</span>
+    </div>
+    <div>
+      <p class="lead">Five kids out of Florida making the music your parents warned you about. Seven-string riffs, busted PA systems, pants wider than the stage.</p>
+      <p class="mut">Booking, press, or just want to yell at us? Hit the contact page or slide into the DMs.</p>
+      <p><a class="btn btn-blood" href="https://1zfeyd-3r.myshopify.com/pages/contact" target="_blank" rel="noopener"><b>Contact / Booking</b></a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <p class="foot-big">Want <span>Nu</span> Info?</p>
+    <p class="mut" style="max-width:52ch;color:var(--concrete)">Join the mailing list on the store for drops, dates and demos before anyone else.</p>
+    <div class="foot-links">
+      <a href="https://1zfeyd-3r.myshopify.com/" target="_blank" rel="noopener">Merch Store</a>
+      <a href="https://instagram.com/exoplasmfl" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://1zfeyd-3r.myshopify.com/pages/contact" target="_blank" rel="noopener">Contact</a>
+    </div>
+    <img src="images/logo-small.png" alt="" style="height:26px;width:auto;display:block;margin-bottom:.8rem;opacity:.85">
+    <p class="foot-fine">&copy; 2026 Exoplasm &mdash; Florida &#9760; all noise reserved</p>
+  </div>
+</footer>
+
+</body>
+</html>
