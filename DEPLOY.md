@@ -34,21 +34,22 @@ Either way you immediately get a live `something.vercel.app` URL to test.
    - `CNAME` for `www` → `cname.vercel-dns.com`
 3. DNS takes minutes to a few hours. HTTPS certificate is automatic.
 
-## 3. IMPORTANT — what happens to the Shopify store
+## 3. The merch store — Fourthwall
 
-Right now exoplasm.net IS the Shopify store. The moment DNS moves to Vercel,
-the store is no longer reachable at exoplasm.net.
+The store moved from Shopify to **Fourthwall** (2026-08-10). All merch,
+store, and contact links in index.html point at the shop's permanent address:
+**https://exoplasm-shop.fourthwall.com** (products at `/products/<slug>`,
+contact form at `/contact`). That URL always works no matter where
+exoplasm.net points.
 
-That's why every merch link in index.html points to the store's permanent
-address instead: **https://1zfeyd-3r.myshopify.com** — that URL always works,
-no matter where the domain points.
-
-Later options:
-- **Nicer store URL on Shopify:** in Shopify admin add domain `shop.exoplasm.net`
-  (registrar: `CNAME` for `shop` → `shops.myshopify.com`), then in index.html
-  find-and-replace `1zfeyd-3r.myshopify.com` → `shop.exoplasm.net`.
-- **Leaving Shopify** (e.g. for Fourthwall): find-and-replace the store links
-  in index.html with the new store's product URLs. They appear 11 times.
+- **Nicer store URL later:** in Fourthwall (Settings → Domains) add
+  `shop.exoplasm.net`, set the registrar CNAME it shows you, then
+  find-and-replace `exoplasm-shop.fourthwall.com` → `shop.exoplasm.net`
+  in index.html.
+- Product prices are hardcoded on the merch cards — if a price changes in
+  Fourthwall, update the matching `card-price` in index.html.
+- The old Shopify store (1zfeyd-3r.myshopify.com) can be closed once
+  Fourthwall is confirmed working; no site links depend on it anymore.
 
 ## 4. Updating the site
 
