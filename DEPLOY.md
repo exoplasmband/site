@@ -57,3 +57,25 @@ Vercel redeploys automatically) or run `npx vercel --prod` again (Option B).
 
 Slot for music embeds: search index.html for `embed-slot` — replace that box
 with a Spotify/Bandcamp iframe when the first release is out.
+
+## 5. Show dates (automatic)
+
+The "In the Pit" section renders from `shows.json`, which is scraped from the
+band's Concert Archives page (concertarchives.org/bands/exoplasm):
+
+```
+shows.json                      the data — upcoming + past shows
+scripts/update-shows.mjs        the scraper (node scripts/update-shows.mjs)
+.github/workflows/update-shows.yml   runs the scraper daily and commits changes
+```
+
+- **Requires the GitHub deploy path (Option A).** The daily refresh is a GitHub
+  Action; with a CLI-only deploy it never runs (you'd run the scraper by hand
+  and `npx vercel --prod` instead).
+- Whoever logs shows on Concert Archives keeps the site current — the page is
+  the source of truth. New show there → on the site within a day.
+- If the scrape breaks (site layout change / bot blocking), the Action shows a
+  red ✗ in the repo's Actions tab and the site keeps the last good data. The
+  page never breaks — worst case the dates go stale.
+- If `shows.json` is missing or has no upcoming dates, the section falls back
+  to the "Next dates announcing soon" box.
