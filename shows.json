@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T00:35:23.516Z",
+  "updated": "2026-08-17T16:28:57.262Z",
   "source": "https://www.concertarchives.org/bands/exoplasm",
   "shows": [
     {
@@ -13,13 +13,23 @@
       "url": "https://www.concertarchives.org/concerts/flaw-2b89f2bd-b13f-4eb6-891d-9c8c22bc0c85"
     },
     {
+      "date": "2026-10-07",
+      "title": "Black Flag / Exoplasm",
+      "tour": null,
+      "bands": null,
+      "venue": "Brass Mug",
+      "location": "Tampa, Florida, United States",
+      "upcoming": true,
+      "url": "https://www.concertarchives.org/concerts/black-flag-exoplasm"
+    },
+    {
       "date": "2026-08-14",
       "title": "Category-3 / Exoplasm / Noch Down / Scarlett Eclipse / Magic 8-Ball",
       "tour": null,
       "bands": null,
       "venue": "Deviant Libation",
       "location": "Tampa, Florida, United States",
-      "upcoming": true,
+      "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/category-3-exoplasm-noch-down-scarlett-eclipse-magic-8-ball"
     },
     {
@@ -44,8 +54,8 @@
     },
     {
       "date": "2026-06-04",
-      "title": "Exoplasm / ZerøFL / Slowrot / Veneficus",
-      "tour": "Exoplasm & Zero - Orpheum 2026",
+      "title": "Exoplasm / ZerøFL / Slowrot / Veneficus / Escoria / Ghost Tape / S.O.L. / The Librarians",
+      "tour": null,
       "bands": null,
       "venue": "The Orpheum",
       "location": "Tampa, Florida, United States",
