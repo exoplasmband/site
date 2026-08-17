@@ -71,10 +71,18 @@ function parseRow(tr) {
 }
 
 async function main() {
-  const res = await fetch(SOURCE, {
+  // Direct fetch works from residential IPs; GitHub Actions runners are
+  // blocked by Concert Archives' bot protection, so CI routes through
+  // ScrapingBee (SCRAPINGBEE_API_KEY secret). render_js=false: the tables
+  // are server-rendered, and it costs 1 credit instead of 5.
+  const key = process.env.SCRAPINGBEE_API_KEY;
+  const target = key
+    ? `https://app.scrapingbee.com/api/v1/?api_key=${key}&render_js=false&url=${encodeURIComponent(SOURCE)}`
+    : SOURCE;
+  const res = await fetch(target, {
     headers: { 'User-Agent': UA, Accept: 'text/html' },
   });
-  if (!res.ok) throw new Error(`Fetch failed: HTTP ${res.status}`);
+  if (!res.ok) throw new Error(`Fetch failed: HTTP ${res.status}${key ? ' (via proxy)' : ''}`);
   const html = await res.text();
 
   const rows = html.match(/<tr[^>]*>[\s\S]*?<\/tr>/g) || [];
