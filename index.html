@@ -1,4 +1,24 @@
 <!doctype html>
+<!--
+  ═══════════════════════════════════════════════════════════════════
+  EXOPLASM.NET — one file, no build step. Edit, push to main, done
+  (Vercel redeploys automatically in ~30 seconds).
+
+  HOW TO EDIT — search for these markers:
+    [EDIT: COLORS]     site color palette
+    [EDIT: NAV]        top navigation links
+    [EDIT: HERO]       big top photo + buttons
+    [EDIT: MUSIC]      Spotify/Bandcamp embed slot
+    [EDIT: SHOWS]      show dates (auto-updated — read the note there)
+    [EDIT: TICKER]     scrolling red banner text
+    [EDIT: MERCH]      product cards, prices, store links
+    [EDIT: ABOUT]      band photo + bio
+    [EDIT: FOOTER]     bottom links
+
+  Merch lives at https://exoplasm-shop.fourthwall.com — see DEPLOY.md
+  for how the store, domain, and show-scraper are wired together.
+  ═══════════════════════════════════════════════════════════════════
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -19,6 +39,9 @@
 </head>
 <body>
 <style>
+  /* [EDIT: COLORS] — change these and the whole site follows.
+     void=background, bone=text, blood=red accent, ice=links,
+     concrete=muted gray, amber=cheetah divider strips. */
   :root{
     --void:#0b0a09;
     --void2:#141210;
@@ -279,6 +302,7 @@
   .foot-fine{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--concrete)}
 </style>
 
+<!-- [EDIT: NAV] — menu links. Each <a href="#..."> jumps to a section id below. -->
 <nav class="nav">
   <a class="nav-logo" href="#top"><img src="images/logo-small.png" alt="Exoplasm — home"></a>
   <div class="nav-links">
@@ -290,6 +314,11 @@
   </div>
 </nav>
 
+<!-- [EDIT: HERO] — swap the photo by dropping a new file in images/ and
+     changing the src below. If faces get cropped weird on wide screens,
+     adjust "object-position:50% 28%" in the .hero-img style above:
+     the second number is how far DOWN the photo the crop centers
+     (0% = top of photo, 100% = bottom). Buttons are the two <a> tags. -->
 <header class="hero" id="top">
   <img class="hero-img" src="images/band-stairs.jpg" alt="Exoplasm — five-piece nu metal band posing on a stairwell at night">
   <div class="hero-grade"></div>
@@ -304,6 +333,9 @@
   </div>
 </header>
 
+<!-- [EDIT: MUSIC] — when the first release is out, replace the whole
+     <div class="embed-slot">...</div> below with a Spotify or Bandcamp
+     embed (in Spotify: share → embed track/album → copy the <iframe>). -->
 <section class="section" id="music">
   <div class="sec-head"><h2>The Noise</h2><span class="tag">// audio</span></div>
   <div class="embed-slot">
@@ -314,6 +346,13 @@
 
 <div class="cheetah" aria-hidden="true"></div>
 
+<!-- [EDIT: SHOWS] — DON'T hand-edit dates here! This section fills itself
+     from shows.json, which a robot rebuilds daily from the band's
+     concertarchives.org page. To add a show: log it on Concert Archives
+     and it appears on the site within a day. If it's ever broken, check
+     the Actions tab on the GitHub repo for a red X.
+     Editable bits: the "Next dates announcing soon" fallback text below,
+     and PAST_LIMIT in the script at the end (how many past shows show). -->
 <section class="section" id="shows">
   <div class="sec-head"><h2>In the Pit</h2><span class="tag">// shows</span></div>
   <div id="shows-upcoming"></div>
@@ -328,7 +367,7 @@
 <script>
 (function(){
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-  var PAST_LIMIT = 8;
+  var PAST_LIMIT = 8; // how many past shows to list before the "Full History" button
 
   function esc(s){
     return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){
@@ -389,12 +428,21 @@
 })();
 </script>
 
+<!-- [EDIT: TICKER] — the scrolling red banner. The phrases are repeated
+     twice so the loop is seamless: if you change one, change its twin. -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
     <span>Want Nu Info?</span><span>&#9760;</span><span>Fresh Merch Below</span><span>&#9760;</span><span>Support the Scene</span><span>&#9760;</span><span>Want Nu Info?</span><span>&#9760;</span><span>Fresh Merch Below</span><span>&#9760;</span><span>Support the Scene</span><span>&#9760;</span>
   </div>
 </div>
 
+<!-- [EDIT: MERCH] — these cards mirror the "Webpage" collection on
+     Fourthwall (exoplasm-shop.fourthwall.com/collections/webpage).
+     To add a product: copy one whole <a class="card">...</a> block and
+     change three things — the href (product page URL from Fourthwall),
+     the img src (save the product photo into images/ first), and the
+     name + price. Prices do NOT update automatically: if a price
+     changes in Fourthwall, change the matching card-price here too. -->
 <section class="section" id="merch">
   <div class="sec-head"><h2>Merch</h2><span class="tag">// wear the noise</span></div>
   <div class="merch-grid">
@@ -426,6 +474,8 @@
 
 <div class="cheetah" aria-hidden="true"></div>
 
+<!-- [EDIT: ABOUT] — band photo, bio text, and the Contact/Booking button
+     (which goes to the Fourthwall contact form). -->
 <section class="section" id="about">
   <div class="sec-head"><h2>The Band</h2><span class="tag">// who</span></div>
   <div class="about-grid">
@@ -441,6 +491,7 @@
   </div>
 </section>
 
+<!-- [EDIT: FOOTER] — bottom links and the fine print. -->
 <footer>
   <div class="foot-inner">
     <p class="foot-big">Want <span>Nu</span> Info?</p>

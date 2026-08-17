@@ -1,9 +1,20 @@
+# Rebuilds shows.json every morning from the band's Concert Archives page.
+# A successful run that finds a new show commits it, which makes Vercel
+# redeploy the site. A red X on this workflow = the scrape failed and the
+# site is serving its last good data (nothing breaks, dates just go stale).
+#
+# Requirements: the SCRAPINGBEE_API_KEY repository secret must exist
+# (Settings → Secrets and variables → Actions). Concert Archives blocks
+# GitHub's servers, so the fetch goes through ScrapingBee (~1 credit/day).
+#
+# To change WHEN it runs: edit the cron line (UTC, format: min hour * * *).
+# To run it RIGHT NOW: Actions tab → "Update shows data" → Run workflow.
 name: Update shows data
 
 on:
   schedule:
-    - cron: '17 9 * * *'   # daily ~5:17am ET
-  workflow_dispatch: {}     # manual "Run workflow" button
+    - cron: '17 9 * * *'   # daily 09:17 UTC = ~5:17am ET
+  workflow_dispatch: {}     # enables the manual "Run workflow" button
 
 permissions:
   contents: write
