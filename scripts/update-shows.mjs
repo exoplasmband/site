@@ -99,6 +99,17 @@ async function main() {
   }
 
   shows.sort((a, b) => b.date.localeCompare(a.date));
+
+  // Only rewrite when the shows actually changed — the `updated` timestamp
+  // would otherwise make every run dirty and trigger a daily no-op deploy.
+  try {
+    const existing = JSON.parse(fs.readFileSync(OUT, 'utf8'));
+    if (JSON.stringify(existing.shows) === JSON.stringify(shows)) {
+      console.log(`No changes (${shows.length} shows) — shows.json left untouched.`);
+      return;
+    }
+  } catch { /* missing or unparseable file — write fresh */ }
+
   const payload = {
     updated: new Date().toISOString(),
     source: SOURCE,
