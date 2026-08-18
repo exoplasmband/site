@@ -471,6 +471,34 @@
     <a class="btn btn-ghost" href="https://exoplasm-shop.fourthwall.com/collections/all" target="_blank" rel="noopener"><b>Full Store &rarr;</b></a>
   </div>
 </section>
+<script>
+(function(){
+  fetch('https://exoplasm-shop.fourthwall.com/collections/webpage.json')
+    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(data){
+      var products = (data && (data.products || data.items || (data.collection && data.collection.products))) || [];
+      if(!products.length) return;
+      var grid = document.querySelector('#merch .merch-grid');
+      if(!grid) return;
+      var html = products.map(function(p){
+        var title = p.title || p.name || 'Merch Item';
+        
+        // Ensure product link always points to Fourthwall domain instead of relative link //
+        var rawUrl = p.url || ('/products/' + (p.slug || p.handle || ''));
+        var url = rawUrl.indexOf('http') === 0 ? rawUrl : ('https://exoplasm-shop.fourthwall.com' + (rawUrl.indexOf('/') === 0 ? '' : '/') + rawUrl);
+        
+        var img = (p.images && p.images[0] && (p.images[0].url || p.images[0].src)) || p.featured_image || p.image || 'images/outbreak.jpg';
+        var rawPrice = p.unit_price ? (p.unit_price/100) : (p.price ? (typeof p.price === 'number' ? (p.price > 100 ? p.price/100 : p.price) : p.price) : 20);
+        var price = '$' + Number(rawPrice).toFixed(0);
+        return '<a class="card" href="' + url + '" target="_blank" rel="noopener">' +
+               '<img src="' + img + '" alt="' + title + '">' +
+               '<div class="card-body"><span class="card-name">' + title + '</span><span class="card-price">' + price + '</span></div>' +
+               '</a>';
+      }).join('');
+      grid.innerHTML = html;
+    }).catch(function(){ /* Fail-safe: retains original static cards on failure */ });
+})();
+</script>
 
 <div class="cheetah" aria-hidden="true"></div>
 
