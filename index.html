@@ -171,15 +171,16 @@
   a.inline:hover{color:var(--blood)}
 
  /* tickets (featured item) */
-  .card-featured{
+  .card.card-featured{
     display:block;
-    max-width:100%;
-    margin-top:1.8rem;
+    max-width:580px;
+    margin:1.8rem auto 0;
   }
-  .card-featured img{
+  .card.card-featured img{
     width:100%;
     height:auto;
-    aspect-ratio:auto;
+    aspect-ratio:2550 / 3300;
+    object-fit:contain;
     display:block;
   }
   .embed-slot .sub{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--concrete)}
