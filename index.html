@@ -170,15 +170,17 @@
   a.inline{color:var(--ice);text-decoration:underline;text-underline-offset:3px}
   a.inline:hover{color:var(--blood)}
 
-  /* music */
-  .embed-slot{
-    margin-top:1.8rem;border:2px dashed var(--concrete);
-    padding:2.6rem 1.5rem;text-align:center;background:var(--void2);
+ /* tickets (featured item) */
+  .card-featured{
+    display:block;
+    max-width:100%;
+    margin-top:1.8rem;
   }
-  .embed-slot .big{
-    font-family:var(--display);font-size:clamp(1.8rem,4.5vw,2.8rem);
-    text-transform:uppercase;letter-spacing:.05em;color:var(--blood);
-    transform:scaleY(1.1);display:block;margin-bottom:.5rem;
+  .card-featured img{
+    width:100%;
+    height:auto;
+    aspect-ratio:auto;
+    display:block;
   }
   .embed-slot .sub{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--concrete)}
 
@@ -306,7 +308,7 @@
 <nav class="nav">
   <a class="nav-logo" href="#top"><img src="images/logo-small.png" alt="Exoplasm — home"></a>
   <div class="nav-links">
-    <a href="#music">Music</a>
+    <a href="#tickets">Tickets</a>
     <a href="#shows">Shows</a>
     <a href="#merch">Merch</a>
     <a href="#about">The Band</a>
@@ -333,15 +335,18 @@
   </div>
 </header>
 
-<!-- [EDIT: MUSIC] — when the first release is out, replace the whole
-     <div class="embed-slot">...</div> below with a Spotify or Bandcamp
-     embed (in Spotify: share → embed track/album → copy the <iframe>). -->
-<section class="section" id="music">
-  <div class="sec-head"><h2>The Noise</h2><span class="tag">// audio</span></div>
-  <div class="embed-slot">
-    <span class="big">First tracks loading&hellip;</span>
-    <span class="sub">&#9654; Spotify / Bandcamp player drops in here &mdash; until then, catch live clips on <a class="inline" href="https://instagram.com/exoplasmfl" target="_blank" rel="noopener">Instagram</a></span>
-  </div>
+<!-- [EDIT: TICKETS] — featured show flyer & tickets link.
+     To update for next show: change the href (Fourthwall ticket URL),
+     the img src (flyer filename in images/), the product name, and the price. -->
+<section class="section" id="tickets">
+  <div class="sec-head"><h2>Tickets</h2><span class="tag">// featured show</span></div>
+  <a class="card card-featured" href="https://exoplasm-shop.fourthwall.com/products/black-flag-exoplasm-concert-ticket-brass-mug" target="_blank" rel="noopener">
+    <img src="images/black_flag_exoplasm_flyer.jpg" alt="Black Flag and Exoplasm live show flyer">
+    <div class="card-body">
+      <span class="card-name">Click Here to Buy Tickets</span>
+      <span class="card-price">$30</span>
+    </div>
+  </a>
 </section>
 
 <div class="cheetah" aria-hidden="true"></div>
