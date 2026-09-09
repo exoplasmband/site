@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T10:50:41.683Z",
+  "updated": "2026-09-09T13:45:49.778Z",
   "source": "https://www.concertarchives.org/bands/exoplasm",
   "shows": [
     {
@@ -7,8 +7,8 @@
       "title": "Flaw / Exoplasm",
       "tour": null,
       "bands": null,
-      "venue": "Brass Mug",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": true,
       "url": "https://www.concertarchives.org/concerts/flaw-2b89f2bd-b13f-4eb6-891d-9c8c22bc0c85"
     },
@@ -17,8 +17,8 @@
       "title": "Black Flag / Exoplasm",
       "tour": null,
       "bands": null,
-      "venue": "Brass Mug",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": true,
       "url": "https://www.concertarchives.org/concerts/black-flag-exoplasm"
     },
@@ -27,8 +27,8 @@
       "title": "Category-3 / Exoplasm / Noch Down / Scarlett Eclipse / Magic 8-Ball",
       "tour": null,
       "bands": null,
-      "venue": "Deviant Libation",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/category-3-exoplasm-noch-down-scarlett-eclipse-magic-8-ball"
     },
@@ -37,8 +37,8 @@
       "title": "ZerøFL / Million / The Wade Garrett / Exoplasm / Category-3 / Noch Down",
       "tour": "ZerøFL EP Release Show",
       "bands": null,
-      "venue": "The Noise Box",
-      "location": "Brandon, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/zerofl-ep-release-show"
     },
@@ -47,8 +47,8 @@
       "title": "Softspine Fest",
       "tour": null,
       "bands": "Severed Silence / ZerøFL / Exoplasm / Escoria / Category-3 / Terminal Severance / Always Forward / Fates Design / Two Nights / Remyi Flows / S.O.L. / Bedazzled Cadaver",
-      "venue": "Commodore",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/zerofest"
     },
@@ -57,8 +57,8 @@
       "title": "Exoplasm / ZerøFL / Slowrot / Veneficus / Escoria / Ghost Tape / S.O.L. / The Librarians",
       "tour": null,
       "bands": null,
-      "venue": "The Orpheum",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/exoplasm-zero-orpheum-2026"
     },
@@ -67,8 +67,8 @@
       "title": "Severed Silence / Exoplasm / Slowrot / Partner of Insanity",
       "tour": null,
       "bands": null,
-      "venue": "The Moon Tower",
-      "location": "Dunedin, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/severed-silence-exoplasm-slowrot-partner-of-insanity"
     },
@@ -77,8 +77,8 @@
       "title": "Smile Empty Soul / Exoplasm / Three to One",
       "tour": null,
       "bands": null,
-      "venue": "Brass Mug",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/april-in-the-sun-tour"
     },
@@ -87,8 +87,8 @@
       "title": "Slowrot / Veneficus / Exoplasm / Ballistic Mafia / Whorer / The Librarians / Corpse Corrosion",
       "tour": null,
       "bands": null,
-      "venue": "Deviant Libation",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/slowrot-veneficus-exoplasm-ballistic-mafia-whorer-the-librarians-corpse-corrosion"
     },
@@ -97,8 +97,8 @@
       "title": "ZerøFL / Exoplasm / Blackout / Samadhi / Avernus / Wadeview / Girth",
       "tour": null,
       "bands": null,
-      "venue": "The Barter Box",
-      "location": "Lakeland, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/zerofl-exoplasm-blackout-samadhi-avernus-wadeview-girth"
     },
@@ -107,8 +107,8 @@
       "title": "Exoplasm / Good Gourd! / S.O.L. / Figure It Out / Wounds To Remember",
       "tour": null,
       "bands": null,
-      "venue": "Deviant Libation",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/exoplasm-good-gourd-s-o-l-figure-it-out-wounds-to-remember"
     },
@@ -117,8 +117,8 @@
       "title": "Wiltwither / God Glitch / Necrotizing / Exoplasm / ZerøFL",
       "tour": "Wiltwither & God Glitch Co-Headline Tour 2025",
       "bands": null,
-      "venue": "The Noise Box",
-      "location": "Brandon, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/wiltwither-god-glitch-co-headline-tour-2025"
     },
@@ -127,8 +127,8 @@
       "title": "Exoplasm / Veneficious Doom / Slowrot / Ballistic Mafia",
       "tour": null,
       "bands": null,
-      "venue": "Brass Mug",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/exoplasm-veneficious-doom-slowrot-ballistic-mafia"
     },
@@ -137,8 +137,8 @@
       "title": "Exoplasm / The Pop Off / Deadmaul / DexTheWolf",
       "tour": null,
       "bands": null,
-      "venue": "Brass Mug",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/exoplasm-the-pop-off-deadmaul-dexthewolf"
     },
@@ -147,8 +147,8 @@
       "title": "Deadweight / Slowrot / Veneficus Doom / Exoplasm",
       "tour": null,
       "bands": null,
-      "venue": "Brass Mug",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/deadweight-slowrot-veneficus-doom-exoplasm"
     },
@@ -157,8 +157,8 @@
       "title": "Side Winder / Exoplasm / Roads End / Deadmaul",
       "tour": null,
       "bands": null,
-      "venue": "Brass Mug",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/side-winder-exoplasm-roads-end-deadmaul"
     },
@@ -167,8 +167,8 @@
       "title": "Exoplasm / Gunnar Gill / RedEyesBlackDragon / Slice Paper Wrists / M.O.B",
       "tour": null,
       "bands": null,
-      "venue": "The Havoc",
-      "location": "Cocoa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/exoplasm-gunnar-gill-redeyesblackdragon-slice-paper-wrists-m-o-b"
     },
@@ -177,8 +177,8 @@
       "title": "Animosity / Bedazzled Cadaver / Exoplasm",
       "tour": null,
       "bands": null,
-      "venue": "Ology Brewing",
-      "location": "Tampa, Florida, United States",
+      "venue": null,
+      "location": null,
       "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/animosity-bedazzled-cadaver-exoplasm"
     }
