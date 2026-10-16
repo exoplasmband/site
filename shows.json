@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T16:29:03.173Z",
+  "updated": "2026-10-16T13:59:36.110Z",
   "source": "https://www.concertarchives.org/bands/exoplasm",
   "shows": [
     {
@@ -19,7 +19,7 @@
       "bands": null,
       "venue": null,
       "location": null,
-      "upcoming": true,
+      "upcoming": false,
       "url": "https://www.concertarchives.org/concerts/black-flag-exoplasm"
     },
     {
